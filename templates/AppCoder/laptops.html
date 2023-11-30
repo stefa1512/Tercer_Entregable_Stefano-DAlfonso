@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block productoIngresado %}
+
+    <h1>Celulares agregados:</h1>
+    <ul>
+    {% for celular in celulares %}
+        <li>{{celular.modelo}}</li>
+        <li>{{celular.marca}}</li>
+    {% endfor %}
+    </ul>    
+{% endblock productoIngresado %}

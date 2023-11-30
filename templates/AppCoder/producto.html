@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block cambio %}
+<div>
+    <form action="/app/buscar" method="GET">
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Buscar">
+
+    </form>
+</div>
+    {% for producto in productos %}
+        <h2>{{producto.marca}}</h2>
+        <p class="lead mb-0">
+             nombre del modelo {{producto.modelo}}
+        </p>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

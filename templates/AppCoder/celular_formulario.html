@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block cambio %}
+    <form action="/app/agregar_celular" method="POST">{% csrf_token %}
+        <table>
+            {{prod_formulario.as_table}}
+        </table>
+        <button type="submit"> Agregar </button>
+    </form>
+
+{% endblock %}

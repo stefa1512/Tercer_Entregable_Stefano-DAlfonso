@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block cambio %}
+    <p>Los celulares que hay de la marca: {{marca}} son:</p>
+
+    {% if celulares %}
+        <ul>
+            {% for celular in celulares %}
+                <li>
+                    {{celular.marca}} - {{celular.modelo}}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontró ningún equipo con ese nombre</p>
+    {% endif %}
+
+{% endblock cambio %}
