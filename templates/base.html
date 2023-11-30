@@ -19,11 +19,6 @@
     <body>
         <!-- Navigation-->
         {% include 'base/navigation.html' %}
-<!--        custom-->
-        {% block cambio %}
-            Un valor por defecto
-        {% endblock %}
-
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -31,47 +26,18 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
-                            <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <!-- Email address input-->
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                                </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
+                            <h1 class="mb-5">Bienvenido</h1>
+                            <h2 class="mb-5">Cotizamos los productos que desees</h2>
                                 <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        {% block cambio %}
+
+        {% endblock %}
 
         <!-- Productos-->
         <section class="productos text-center bg-light">
@@ -79,26 +45,29 @@
                 <h2 class="mb-5">Productos: </h2>
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="producto-item mx-auto mb-5 mb-lg-0">
+                        <div class="producto-item mx-auto mb-2 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="{% static 'assets/img/producto-1.jpg' %}" alt="..." />
-                            <h5>Celular: Agrega el producto para poder realizar la cotización:</h5>
-                            <p class="font-weight-light mb-0">""</p>
+                            <h3>Celulares</h3>
+                            <h5>Agrega un producto para poder realizar la cotización:</h5>
+                            <p class="font-weight-light mb-0"></p>
                             <a href="/app/agregar_celular" class="main-button">Agregar</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="producto-item mx-auto mb-5 mb-lg-0">
+                        <div class="producto-item mx-auto mb-2 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="{% static 'assets/img/producto-2.jpg' %}" alt="..." />
-                            <h5>Tablet: Agrega el producto para poder realizar la cotización:</h5>
-                            <p class="font-weight-light mb-0">""</p>
+                            <h3>Tablets</h3>
+                            <h5>Agrega un producto para poder realizar la cotización:</h5>
+                            <p class="font-weight-light mb-0"></p>
                             <a href="/app/agregar_tablet" class="main-button">Agregar</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="producto-item mx-auto mb-5 mb-lg-0">
+                        <div class="producto-item mx-auto mb-2 mb-lg-0">
                             <img class="img-fluid rounded-circle mb-3" src="{% static 'assets/img/producto-3.jpg' %}" alt="..." />
-                            <h5>Laptop: Agrega el producto para poder realizar la cotización:</h5>
-                            <p class="font-weight-light mb-0">""</p>
+                            <h3>Laptops</h3>
+                            <h5>Agrega un producto para poder realizar la cotización:</h5>
+                            <p class="font-weight-light mb-0"></p>
                             <a href="/app/agregar_laptop" class="main-button">Agregar</a>
                         </div>
                     </div>

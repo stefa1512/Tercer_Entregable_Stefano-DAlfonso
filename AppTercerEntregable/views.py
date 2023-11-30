@@ -25,10 +25,13 @@ def Celular_Formulario(request):
             data = prod_formulario.cleaned_data
             celular = Celular(marca= data['marca'], modelo= data['modelo'], almacenamiento= data['almacenamiento'])
             celular.save()
-            return redirect ("AppCoder/producto.html")
+            return redirect ("AppCoder/show/")
 
         prod_formulario = Celular_Formulario()
-        return render(request, "AppCoder/celular_formulario.html", {"prod_formulario": prod_formulario})
+        contexto = {
+            "form": prod_formulario
+        }
+        return render(request, "AppCoder/celular_formulario.html", contexto)
 
 def Tablet_Formulario(request):
     if request.method == 'POST':
@@ -37,10 +40,13 @@ def Tablet_Formulario(request):
             data = prod_formulario.cleaned_data
             tablet = Celular(marca= data['marca'], modelo= data['modelo'], almacenamiento= data['almacenamiento'])
             tablet.save()
-            return redirect ("AppCoder/producto.html")
+            return redirect ("AppCoder/show/")
 
         prod_formulario = Tablet_Formulario()
-        return render(request, "AppCoder/televisor_formulario.html", {"prod_formulario": prod_formulario})
+        contexto = {
+            "form": prod_formulario
+        }
+        return render(request, "AppCoder/tablet_formulario.html", contexto)
 
 
 def Laptop_Formulario(request):
@@ -50,10 +56,13 @@ def Laptop_Formulario(request):
             data = prod_formulario.cleaned_data
             laptop = Celular(marca= data['marca'], modelo= data['modelo'], almacenamiento= data['almacenamiento'])
             laptop.save()
-            return redirect ("AppCoder/producto.html")
+            return redirect ("AppCoder/show/")
 
         prod_formulario = Laptop_Formulario()
-        return render(request, "AppCoder/laptop_formulario.html", {"prod_formulario": prod_formulario})
+        contexto = {
+            "form": prod_formulario
+        }
+        return render(request, "AppCoder/laptop_formulario.html", contexto)
 
 def buscar(request):
     if request.GET["marca"]:
@@ -63,3 +72,6 @@ def buscar(request):
     else:
         return HttpResponse("No se encuentra el equipo, ingrese un producto válido")
 
+def show_html(request):
+    contexto = {}
+    return render(request,'base.html',contexto)
